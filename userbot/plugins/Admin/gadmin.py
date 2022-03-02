@@ -1,7 +1,7 @@
 """
-edit By: @rruuurr
+edit By: @ph_7v
 """
-#  for source icss
+#  for source pele
 
 import asyncio
 import base64
