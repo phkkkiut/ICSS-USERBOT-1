@@ -1,5 +1,5 @@
-# Icss - Userbot
-# Owner ~ <@rruuurr>
+# Pele - Userbot
+# Owner ~ <@ph_7v>
 
 from . import Asstid
 from telethon.utils import pack_bot_file_id
