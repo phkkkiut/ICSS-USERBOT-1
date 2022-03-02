@@ -1,6 +1,6 @@
-## Icss - Userbot
+## Pele - Userbot
 
 هنا تجد ملف اوامر البوت المساعد  
 
 - استمتعو به 💕
-- ANL0KE ( [DEV-SOURCE](https://t.me/rruuurr) )
+- PeLe ( [DEV-SOURCE](https://t.me/ph_7v) )
