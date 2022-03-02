@@ -1,5 +1,5 @@
-# Icss - Userbot
-# Owner - Kimo
+# Pele - Userbot
+# Owner - PELE
 
 import glob
 import os
