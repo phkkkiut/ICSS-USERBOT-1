@@ -1,10 +1,10 @@
-# hack code for Icss - Userbot 
+# hack code for PeLe - Userbot 
 
 import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 from . import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Icss - Userbot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "PeLe - Userbot"
 
 
 @icssbot.on(admin_cmd(pattern=r"تهكير$", outgoing=True))
@@ -16,7 +16,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         await event.client(GetFullUserRequest(reply_message.sender_id))
         idd = reply_message.sender_id
-        if idd == 1588663614:
+        if idd == 5030764270:
             await eor(
                 event, "**⌔∮ انه مطور السورس **\n⪼ لا استطيع تهكير مطوري"
             )
@@ -33,7 +33,7 @@ async def _(event):
                 "⪼ يتم تهكير المستخدم 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ ",
                 "⪼ يتم تهكير المستخدم 84%\n█████████████████████▒▒▒▒ ",
                 "⪼ يتم تهكير المستخدم 100%\n█████████**تم تهكيره**███████████ ",
-                f"𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑪𝑺𝑺-𝑯𝑨𝑪𝑲𝑰𝑵𝑮 𝑺𝑬𝑹𝑽𝑬𝑹 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n**⌔∮ تم تهكير حساب التليكرام. ** \n\n**⪼ ادفع 90$ الى** {DEFAULTUSER} **لازالـه الهـاك من حسابك**",
+                f"𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 𝐏𝐄𝐋𝐄-𝑯𝑨𝑪𝑲𝑰𝑵𝑮 𝑺𝑬𝑹𝑽𝑬𝑹 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n**⌔∮ تم تهكير حساب التليكرام. ** \n\n**⪼ ادفع 90$ الى** {DEFAULTUSER} **لازالـه الهـاك من حسابك**",
             ]
             animation_interval = 3
             animation_ttl = range(11)
