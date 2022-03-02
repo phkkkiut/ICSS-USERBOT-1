@@ -1,4 +1,4 @@
-# animation5 for icssuserbot edit by ~ @rruuurr
+# animation5 for peleuserbot edit by ~ @ph_7v
 
 import asyncio
 
