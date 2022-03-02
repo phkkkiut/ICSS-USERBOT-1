@@ -1,23 +1,23 @@
 # ICSS SOURCE
-# ARABIC USERBOT - BY: @rruuurr
+# ARABIC USERBOT - BY: @ph_7v
 
 import aiohttp
 
 
 class AioHttp:
-    @staticmethod
+    @ph_7v
     async def get_json(link):
         async with aiohttp.ClientSession() as session:
             async with session.get(link) as resp:
                 return await resp.json()
 
-    @staticmethod
+    @ph_7v
     async def get_text(link):
         async with aiohttp.ClientSession() as session:
             async with session.get(link) as resp:
                 return await resp.text()
 
-    @staticmethod
+    @ph_7v
     async def get_raw(link):
         async with aiohttp.ClientSession() as session:
             async with session.get(link) as resp:
