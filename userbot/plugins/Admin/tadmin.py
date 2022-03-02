@@ -14,16 +14,16 @@ NO_PERM = "`I don't have sufficient permissions! This is so sed. Alexa play desp
 @icssbot.on(admin_cmd(pattern=r"tmute(?: |$)(.*)"))
 @icssbot.on(sudo_cmd(pattern=r"tmute(?: |$)(.*)", allow_sudo=True))
 @errors_handler
-async def tmuter(kimo):
-    chat = await kimo.get_chat()
+async def tmuter(pele):
+    chat = await pele.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
     # If not admin and not creator, return
     if not admin and not creator:
-        await edit_or_reply(kimo, NO_ADMIN)
+        await edit_or_reply(pele, NO_ADMIN)
         return
     icse = await edit_or_reply(kimo, "`muting....`")
-    user, reason = await get_user_from_event(kimo, icse)
+    user, reason = await get_user_from_event(pele, icse)
     if not user:
         return
     if reason:
@@ -34,8 +34,8 @@ async def tmuter(kimo):
     else:
         await icse.edit("you haven't mentioned time, check `.info tadmin`")
         return
-    self_user = await kimo.client.get_me()
-    itime = await extract_time(kimo, icst)
+    self_user = await pele.client.get_me()
+    itime = await extract_time(pelr, icst)
     if not itime:
         await icse.edit(
             f"Invalid time type specified. Expected m , h , d or w not as {icst}"
@@ -47,7 +47,7 @@ async def tmuter(kimo):
     try:
         await icse.client(
             EditBannedRequest(
-                kimo.chat_id,
+                Pele.chat_id,
                 user.id,
                 ChatBannedRights(until_date=itime, send_messages=True),
             )
@@ -64,7 +64,7 @@ async def tmuter(kimo):
                     BOTLOG_CHATID,
                     "#TMUTE\n"
                     f"**User : **[{user.first_name}](tg://user?id={user.id})\n"
-                    f"**Chat : **{kimo.chat.title}(`{kimo.chat_id}`)\n"
+                    f"**Chat : **{pele.chat.title}(`{pele.chat_id}`)\n"
                     f"**Muted for : **`{icst}`\n"
                     f"**Reason : **`{reason}``",
                 )
@@ -74,11 +74,11 @@ async def tmuter(kimo):
                 f"Muted for {icst}\n"
             )
             if BOTLOG:
-                await kimo.client.send_message(
+                await pele.client.send_message(
                     BOTLOG_CHATID,
                     "#TMUTE\n"
                     f"**User : **[{user.first_name}](tg://user?id={user.id})\n"
-                    f"**Chat : **{kimo.chat.title}(`{kimo.chat_id}`)\n"
+                    f"**Chat : **{pele.chat.title}(`{pele.chat_id}`)\n"
                     f"**Muted for : **`{icst}`",
                 )
         # Announce to logging group
@@ -103,8 +103,8 @@ async def ban(kimo):
     if not admin and not creator:
         await edit_or_reply(kimo, NO_ADMIN)
         return
-    icse = await edit_or_reply(kimo, "`banning....`")
-    user, reason = await get_user_from_event(kimo, icse)
+    icse = await edit_or_reply(pele, "`banning....`")
+    user, reason = await get_user_from_event(pele, icse)
     if not user:
         return
     if reason:
@@ -127,9 +127,9 @@ async def ban(kimo):
         return
     await icse.edit("`Whacking the pest!`")
     try:
-        await kimo.client(
+        await pele.client(
             EditBannedRequest(
-                kimo.chat_id,
+                Pele.chat_id,
                 user.id,
                 ChatBannedRights(until_date=itime, view_messages=True),
             )
@@ -143,7 +143,7 @@ async def ban(kimo):
         return
     # Helps ban group join spammers more easily
     try:
-        reply = await kimo.get_reply_message()
+        reply = await pele.get_reply_message()
         if reply:
             await reply.delete()
     except BadRequestError:
@@ -163,21 +163,21 @@ async def ban(kimo):
                 BOTLOG_CHATID,
                 "#TBAN\n"
                 f"**User : **[{user.first_name}](tg://user?id={user.id})\n"
-                f"**Chat : **{kimo.chat.title}(`{kimo.chat_id}`)\n"
+                f"**Chat : **{pele.chat.title}(`{pele.chat_id}`)\n"
                 f"**Banned untill : **`{icst}`\n"
                 f"**Reason : **__{reason}__",
             )
     else:
         await icse.edit(
-            f"{_format.mentionuser(user.first_name ,user.id)} was banned in {kimo.chat.title}\n"
+            f"{_format.mentionuser(user.first_name ,user.id)} was banned in {pele.chat.title}\n"
             f"banned for {icst}\n"
         )
         if BOTLOG:
-            await kimo.client.send_message(
+            await pele.client.send_message(
                 BOTLOG_CHATID,
                 "#TBAN\n"
                 f"**User : **[{user.first_name}](tg://user?id={user.id})\n"
-                f"**Chat : **{kimo.chat.title}(`{kimo.chat_id}`)\n"
+                f"**Chat : **{pele.chat.title}(`{pele.chat_id}`)\n"
                 f"**Banned untill : **`{icst}`",
             )
 
