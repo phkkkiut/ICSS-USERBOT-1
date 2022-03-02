@@ -1,3 +1,3 @@
 # ICSS - USERBOT
-# OWNER - ANL0KE
+# OWNER - Pele
 # All admins code from catuserbot 
