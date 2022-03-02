@@ -1,7 +1,7 @@
-FROM ANL0KE/ICSS-USERBOT:latest
+FROM PELE/PELE-USERBOT:latest
 
 # نسخ رابط السورس 
-RUN git clone https://github.com/ANL0KE/ICSS-USERBOT.git /root/userbot
+RUN git clone https://github.com/ANL0KE/PELE-USERBOT.git /root/userbot
 # اخـراج العـمل 
 WORKDIR /root/userbot
 
