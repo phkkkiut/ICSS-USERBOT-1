@@ -1,15 +1,15 @@
-# edit by: @rruuurr for icss
+# edit by: @ph_7v for pele
 
 import asyncio
 from collections import deque
 
 from . import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "icss"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "pele"
 
 
-@icssbot.on(admin_cmd(pattern="غبي$"))
-@icssbot.on(sudo_cmd(pattern="غبي$", allow_sudo=True))
+@pelebot.on(admin_cmd(pattern="غبي$"))
+@pelebot.on(sudo_cmd(pattern="غبي$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
