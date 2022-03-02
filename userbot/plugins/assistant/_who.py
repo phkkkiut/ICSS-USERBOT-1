@@ -1,5 +1,5 @@
 # PeLe - Userbot
-# Whois for Icss - Userbot
+# Whois for Pele - Userbot
 # edit ~ <@ph_7v>
 # from ~ <ULTRA-X>
 
