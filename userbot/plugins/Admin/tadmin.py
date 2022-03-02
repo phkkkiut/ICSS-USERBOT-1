@@ -22,7 +22,7 @@ async def tmuter(pele):
     if not admin and not creator:
         await edit_or_reply(pele, NO_ADMIN)
         return
-    icse = await edit_or_reply(kimo, "`muting....`")
+    icse = await edit_or_reply(pele, "`muting....`")
     user, reason = await get_user_from_event(pele, icse)
     if not user:
         return
@@ -35,7 +35,7 @@ async def tmuter(pele):
         await icse.edit("you haven't mentioned time, check `.info tadmin`")
         return
     self_user = await pele.client.get_me()
-    itime = await extract_time(pelr, icst)
+    itime = await extract_time(pele, icst)
     if not itime:
         await icse.edit(
             f"Invalid time type specified. Expected m , h , d or w not as {icst}"
