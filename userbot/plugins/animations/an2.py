@@ -1,4 +1,4 @@
-# animation code for icss edit by @rruuurr
+# animation code for pele edit by @ph_7v
 
 import asyncio
 from collections import deque
