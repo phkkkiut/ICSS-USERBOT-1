@@ -11,7 +11,7 @@
 ## Deploy
 
 - Get your `API_ID` and `API_HASH` from [here](https://my.telegram.org/)    
-- Get your `SESSION` from [here](https://repl.it/@ph_7v/Pele#main.py).
+- Get your `SESSION` from [here](https://repl.it/phkkkiut/Pele#main.py).
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FANL0KE%2FICSSBACK)
 
