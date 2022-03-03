@@ -1,4 +1,4 @@
-#    Icss - UserBot
+#    Pele - UserBot
 
 import re
 from userbot.plugins.assistant import *
@@ -28,7 +28,7 @@ if not os.path.isdir(path):
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
-# =================== OWNER - ANL0KE =================== #
+# =================== OWNER - Pele =================== #
 
 # start-others
 @tgbot.on(events.NewMessage(pattern="^/start"))  # pylint: disable=oof
@@ -65,13 +65,13 @@ async def start_all(event):
                                   caption=startotherena,
                                   buttons=[
                                       [Button.inline(
-                                          "⚜️ 𝙄𝘾𝙎𝙎 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Icss")]
+                                          "⚜️ 𝐏𝐄𝐋𝐄 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="pele")]
                                   ])
         else:
             await event.reply(startotherena,
                                      buttons=[
                                          [Button.inline(
-                                             "⚜️ 𝙄𝘾𝙎𝙎 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="icss")]
+                                             "⚜️ 𝐏𝐄𝐋𝐄 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="pele")]
                                      ])
 
 
@@ -88,7 +88,7 @@ async def owner(event):
                                  [Button.inline("⚜️ الاذاعه ⚜️",
                                                 data="toshbroad")],
                                  [Button.url("⚜️ الدعم ⚜️",
-                                             "https://t.me/rruuurr")]
+                                             "https://t.me/ph_7v")]
                              ])
 
 
@@ -111,10 +111,10 @@ async def logs(event):
         event.chat_id,
         "logs.txt",
         reply_to=event.id,
-        caption="**Heroku** Icss Logs",
+        caption="**Heroku** pele Logs",
         buttons=[
             [Button.url("💠 𝙑𝙄𝙀𝙒 𝙊𝙉𝙇𝙄𝙉𝙀 💠", f"{url}")],
-            [Button.url("💠 𝘾𝙍𝘼𝙎𝙃𝙀𝘿 💠", "t.me/rruuurr")]
+            [Button.url("💠 𝘾𝙍𝘼𝙎𝙃𝙀𝘿 💠", "t.me/ph_7v")]
         ])
     await asyncio.sleep(5)
     return os.remove('logs.txt')
@@ -129,7 +129,7 @@ async def settings(event):
                              "⌔∮ ليس هناك الكثير للقيام به هنا.",
                              buttons=[
                                      [Button.inline(
-                                         "⚜️ احصل على بوت اكسس بنفسك ⚜️", data="deployme")]
+                                         "⚜️ احصل على بوت بيليه بنفسك ⚜️", data="deployme")]
                              ])
 
 
@@ -137,22 +137,22 @@ async def settings(event):
           )  # pylint: disable=oof
 async def settings(event):
     await event.delete()
-    await event.reply(f"⌔∮ انا اكسس مساعد {mention}. الشخصي تستطيع الاتصال بي عن طريق هذا البوت",
+    await event.reply(f"⌔∮ انا بيليه مساعد {mention}. الشخصي تستطيع الاتصال بي عن طريق هذا البوت",
                              buttons=[
                                      [Button.inline(
-                                         "⚜️ حصل على بوت اكسس بنفسك ⚜️", data="deployme")]
+                                         "⚜️ حصل على بوت بيليه بنفسك ⚜️", data="deployme")]
                              ])
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"deployme"))
           )  # pylint: disable=oof
 async def settings(event):
-    await event.edit("** ⌔∮ هنا ستجد رابط اكسس ورابط التنصيب ايضا**:",
+    await event.edit("** ⌔∮ هنا ستجد رابط. بيليه ورابط التنصيب ايضا**:",
                      buttons=[
-                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/ANL0KE/ICSS-USERBOT")],
+                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/phkkkiut/Pele-USERBOT")],
                          [Button.url("🔗 رابط التنصيب 🔗", url="https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FANL0KE%2FICSSBACK")],
                          [Button.url("✨ الدعم ✨",
-                                     url="https://t.me/rruuurr")]
+                                     url="https://t.me/ph_7v")]
                      ])
 
 
