@@ -1,4 +1,4 @@
-# ICSS - USERBOT
+# Pele - USERBOT
 
 
 from sqlalchemy import (
